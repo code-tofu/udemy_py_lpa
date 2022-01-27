@@ -75,3 +75,57 @@
 # for i in range(0, 20):
 #     if i>0 and not (i%3 == 0 or i%5 ==0):
 #          print(i)
+
+# # EXERCISE 12
+# # use a for loop and augmented assignment to give answer the result of multiplying number by multiplier
+# number = 5
+# multiplier = 8
+# answer = 0
+ 
+# # add your loop after this comment
+# for i in range(multiplier): #you can range a value?
+#     answer += number #watch indents
+# print(answer)
+
+
+#  EXERCSE 13
+# split the following into two separate lists, containg flowers or shrubs
+data = [
+    "Andromeda - Shrub",
+    "Bellflower - Flower",
+    "China Pink - Flower",
+    "Daffodil - Flower",
+    "Evening Primrose - Flower",
+    "French Marigold - Flower",
+    "Hydrangea - Shrub",
+    "Iris - Flower",
+    "Japanese Camellia - Shrub",
+    "Lavender - Shrub",
+    "Lilac - Shrub",
+    "Magnolia - Shrub",
+    "Peony - Shrub",
+    "Queen Anne's Lace - Flower",
+    "Red Hot Poker - Flower",
+    "Snapdragon - Flower",
+    "Sunflower - Flower",
+    "Tiger Lily - Flower",
+    "Witch Hazel - Shrub",
+]
+
+flowers = []
+shrubs = []
+
+for i in data:
+    if( "Flower" in i):
+        flowers.append(i) #method should be () not []
+    else:
+        shrubs.append(i)
+print(flowers)
+print(shrubs)
+
+#solution:
+for plant in data:
+    if "Flower" in plant:
+        flowers.append(plant)
+    elif "Shrub" in plant:
+        shrubs.append(plant)
