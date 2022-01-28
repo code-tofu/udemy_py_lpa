@@ -41,3 +41,4 @@ for number in numbers:
         break
 else: #else applied to loops with a break - execute if the loop does not break
     print("All those numbers are fine")
+
