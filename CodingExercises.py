@@ -90,42 +90,58 @@
 
 #  EXERCSE 13
 # split the following into two separate lists, containg flowers or shrubs
-data = [
-    "Andromeda - Shrub",
-    "Bellflower - Flower",
-    "China Pink - Flower",
-    "Daffodil - Flower",
-    "Evening Primrose - Flower",
-    "French Marigold - Flower",
-    "Hydrangea - Shrub",
-    "Iris - Flower",
-    "Japanese Camellia - Shrub",
-    "Lavender - Shrub",
-    "Lilac - Shrub",
-    "Magnolia - Shrub",
-    "Peony - Shrub",
-    "Queen Anne's Lace - Flower",
-    "Red Hot Poker - Flower",
-    "Snapdragon - Flower",
-    "Sunflower - Flower",
-    "Tiger Lily - Flower",
-    "Witch Hazel - Shrub",
-]
+# data = [
+#     "Andromeda - Shrub",
+#     "Bellflower - Flower",
+#     "China Pink - Flower",
+#     "Daffodil - Flower",
+#     "Evening Primrose - Flower",
+#     "French Marigold - Flower",
+#     "Hydrangea - Shrub",
+#     "Iris - Flower",
+#     "Japanese Camellia - Shrub",
+#     "Lavender - Shrub",
+#     "Lilac - Shrub",
+#     "Magnolia - Shrub",
+#     "Peony - Shrub",
+#     "Queen Anne's Lace - Flower",
+#     "Red Hot Poker - Flower",
+#     "Snapdragon - Flower",
+#     "Sunflower - Flower",
+#     "Tiger Lily - Flower",
+#     "Witch Hazel - Shrub",
+# ]
 
-flowers = []
-shrubs = []
+# flowers = []
+# shrubs = []
 
-for i in data:
-    if( "Flower" in i):
-        flowers.append(i) #method should be () not []
-    else:
-        shrubs.append(i)
-print(flowers)
-print(shrubs)
+# for i in data:
+#     if( "Flower" in i):
+#         flowers.append(i) #method should be () not []
+#     else:
+#         shrubs.append(i)
+# print(flowers)
+# print(shrubs)
 
-#solution:
-for plant in data:
-    if "Flower" in plant:
-        flowers.append(plant)
-    elif "Shrub" in plant:
-        shrubs.append(plant)
+# #solution:
+# for plant in data:
+#     if "Flower" in plant:
+#         flowers.append(plant)
+#     elif "Shrub" in plant:
+#         shrubs.append(plant)
+
+# EXERCISE 14
+# # user input is separated by 2 commas
+# print("Please enter three numbers:")
+# usernum = []
+# for i in range(2):
+#     usernum[i] = int(input()) #takes in three user inputs and converts to int
+# print(user num[0] + usernum[1] - usernum[2])
+
+#takes in user input as string of 3 numbers separated by commas
+#use loop to string each list item until the comma
+#convert each list item into int
+userstring = input("Please enter three numbers:")
+userlist = userstring.split(",")
+#split method splits a string into a list where each word is a list item
+print(int(userlist[0])+int(userlist[1])-int(userlist[2]))

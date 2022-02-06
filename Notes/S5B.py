@@ -69,3 +69,16 @@ for index in range(len(data) - 1, - 1, - 1):
         print(index, data)
         del data[index]
 print(data)
+
+#using a for loop causes Pythong to create an iterator for you, thats why modifying the loop control variable doesn't work
+#use reversed() instead, to run the iterator in reverse
+#index start at zero, but value is related to the data in reversed order
+top_index = len(data) - 1
+for index, value in enumerate(reversed(data)):
+    print(index,value)
+    if value < min_valid or value > max_valid:
+        print(top_index - index, value)
+        del data[top_index - index]
+#enumerate is more efficient than index look up in previous example
+print(data)
+#deleting a range of items is faster than deleting items one by one (python has to shift the element down each time)

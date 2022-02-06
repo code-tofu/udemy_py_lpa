@@ -42,31 +42,94 @@
 # Write a programme to print a number of options (at least 4) and allow the user to select an option from the list. The options shall be numbered 1 to 9
 # If user picks a valid vhoice, programme should print message
 # loop should terminate when the user chooses 
-print("Welcome to the pokemon world!")
-pokemon = ["1. Pikachu","2. Charmander","3. Squirtle","4. Charmander","5. Eevee" ]
-for i in pokemon:
-    print(i)
+# print("Welcome to the pokemon world!")
+# pokemon = ["1. Pikachu","2. Charmander","3. Squirtle","4. Charmander","5. Eevee" ]
+# for i in pokemon:
+#     print(i)
 
-# You can check if choice is in sequence "12345". I.e. string comparison
-# Use choice!=0 to short code as break condition
-# What data types am I comparing?
+# # You can check if choice is in sequence "12345". I.e. string comparison
+# # Use choice!=0 to short code as break condition
+# # What data types am I comparing?
 
-choice = int(input("Select your starter pokemon by keying in the number: "))
-# need to check if not int
-while True:
-    if choice > 0 and choice < 6: #what if i don't type in numbers? Note that you can't > and > it has to be 0 < choice < 6
-        print("You selected Pokeball {}".format(choice))
-        choice = int(input("Aww, your rival has already selected that! Please select again!"))
-        continue
-    elif choice == 0:
-        print("Aww, there is a world of adventure that awaits! Goodbye for now!")
-        break
-    else:
-        print("That's not a valid choice!")
-        for i in pokemon:
-            print(i)
-        choice = int(input("Please make a valid choice by keying in the number!")) #need to rebind choice else endless loop 
-        continue
+# choice = int(input("Select your starter pokemon by keying in the number: "))
+# # need to check if not int
+# while True:
+#     if choice > 0 and choice < 6: #what if i don't type in numbers? Note that you can't > and > it has to be 0 < choice < 6
+#         print("You selected Pokeball {}".format(choice))
+#         choice = int(input("Aww, your rival has already selected that! Please select again!"))
+#         continue
+#     elif choice == 0:
+#         print("Aww, there is a world of adventure that awaits! Goodbye for now!")
+#         break
+#     else:
+#         print("That's not a valid choice!")
+#         for i in pokemon:
+#             print(i)
+#         choice = int(input("Please make a valid choice by keying in the number!")) #need to rebind choice else endless loop 
+#         continue
 
+# # CHALLENGE 114
+# #print out all the meals in the menu but remove spam
+# #either remove spam from each list then print the list, or print out the items in each list which is not spam
+# menu = [
+#     ["egg", "bacon"],
+#     ["egg", "sausage", "bacon"],
+#     ["egg", "spam"],
+#     ["egg", "bacon", "spam"],
+#     ["egg", "bacon", "sausage", "spam"],
+#     ["spam", "bacon", "sausage", "spam"],
+#     ["spam", "sausage", "spam", "bacon", "spam", "tomato", "spam"],
+#     ["spam", "egg", "spam", "spam", "bacon", "spam"],
+# ]
 
+# # #print out item in list if not spam
+# # for meal in menu:
+# #     for item in meal:
+# #         if item != "spam":
+# #             print(item)
 
+# #remove spam from each list then print the list
+# for meal in menu:
+#     mealmaxindex =  len(meal) - 1
+#     for index,item in enumerate(reversed(meal)): #index,item is a tuple?
+#         #The reversed() function returns an iterator that accesses the given sequence in the reverse order.
+#         #The enumerate() method adds counter to an iterable and returns it. The returned object is an enumerate object.
+#         if item == "spam": #need to check for each index
+#             #print(index,item,mealmaxindex-index) #the index iterator is reversed hence the condition is tested but prints the wrong index
+#             print(index,item,mealmaxindex-index) #same as above
+#             del meal[mealmaxindex - index] # if meal[index] != "spam": #need to check for each index -- IndexError: list index out of range
+#     print(meal)
+
+# CHALLENGE 119
+# Use a for loop to produce a list of ints, rather than strings.
+# You can either modify the contents of the 'values_list' list in place, or create a new list of ints
+
+generated_list = ['9', ' ',
+                  '2', '2', '3', ' ',
+                  '3', '7', '2', ' ',
+                  '0', '3', '6', ' ',
+                  '8', '5', '4', ' ',
+                  '7', '7', '5', ' ',
+                  '8', '0', '7']
+values = "".join(generated_list)
+print(values)
+values_list = values.split()
+
+# values_list_num = int(values_list) -- # TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+#edit in place (more memory optimal)
+print(values_list)
+for number in values_list:
+    print(type(number), "",number)
+    number = int(number) #am i modifying in place?
+    print(type(number)) #there seems to be conversion but i am not storing it to memory
+for num in range(len(values_list)):
+    values_list[num] = int(values_list[num])
+print(values_list)
+
+#create a new list (new list)
+values_list_num = []
+for number in values_list:
+    print(number) #number refers to each item list, not the index. the iterable is different
+    #values_list_num.append(int(values_list[number])) accessing [number], not the [index]
+    values_list_num.append(int(number))
+print(values_list_num)
