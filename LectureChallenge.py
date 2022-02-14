@@ -102,34 +102,68 @@
 
 # CHALLENGE 119
 # Use a for loop to produce a list of ints, rather than strings.
-# You can either modify the contents of the 'values_list' list in place, or create a new list of ints
+# # You can either modify the contents of the 'values_list' list in place, or create a new list of ints
 
-generated_list = ['9', ' ',
-                  '2', '2', '3', ' ',
-                  '3', '7', '2', ' ',
-                  '0', '3', '6', ' ',
-                  '8', '5', '4', ' ',
-                  '7', '7', '5', ' ',
-                  '8', '0', '7']
-values = "".join(generated_list)
-print(values)
-values_list = values.split()
+# generated_list = ['9', ' ',
+#                   '2', '2', '3', ' ',
+#                   '3', '7', '2', ' ',
+#                   '0', '3', '6', ' ',
+#                   '8', '5', '4', ' ',
+#                   '7', '7', '5', ' ',
+#                   '8', '0', '7']
+# values = "".join(generated_list)
+# print(values)
+# values_list = values.split()
 
-# values_list_num = int(values_list) -- # TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
-#edit in place (more memory optimal)
-print(values_list)
-for number in values_list:
-    print(type(number), "",number)
-    number = int(number) #am i modifying in place?
-    print(type(number)) #there seems to be conversion but i am not storing it to memory
-for num in range(len(values_list)):
-    values_list[num] = int(values_list[num])
-print(values_list)
+# # values_list_num = int(values_list) -- # TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+# #edit in place (more memory optimal)
+# print(values_list)
+# for number in values_list:
+#     print(type(number), "",number)
+#     number = int(number) #am i modifying in place?
+#     print(type(number)) #there seems to be conversion but i am not storing it to memory
+# for num in range(len(values_list)):
+#     values_list[num] = int(values_list[num])
+# print(values_list)
 
-#create a new list (new list)
-values_list_num = []
-for number in values_list:
-    print(number) #number refers to each item list, not the index. the iterable is different
-    #values_list_num.append(int(values_list[number])) accessing [number], not the [index]
-    values_list_num.append(int(number))
-print(values_list_num)
+# #create a new list (new list)
+# values_list_num = []
+# for number in values_list:
+#     print(number) #number refers to each item list, not the index. the iterable is different
+#     #values_list_num.append(int(values_list[number])) accessing [number], not the [index]
+#     values_list_num.append(int(number))
+# print(values_list_num)
+
+#CHALLENGE 136
+# modify the programe such that an invalid song choice will show the list of albums again instead of terminiating
+from nested_data import albums
+
+SONGS_LIST_INDEX = 3
+SONG_TITLE_INDEX = 1
+
+while True:
+    print("Please choose your album (invalid choice exits):")
+    for index, (title, artist, year, songs) in enumerate(albums):
+        print("{}: {}".format(index + 1, title))
+
+    choice = int(input())
+    if 1 <= choice <= len(albums):
+        songs_list = albums[choice -1][SONGS_LIST_INDEX]
+    else:
+        break
+
+    while True:
+        print("Please choose your song:")
+        for index, (track_number, song) in enumerate(songs_list):
+            print("{}: {}".format(index + 1, song))
+
+        song_choice = int(input())
+        if 1 <= song_choice <= len(songs_list):
+            title = songs_list[song_choice - 1][SONG_TITLE_INDEX]
+            print("Playing {}".format(title)) #the title is still active within the existing while loop before ending?
+            print("=" * 40)
+            break
+        else:
+            print("Please enter a valid song choice")
+            continue
+       
