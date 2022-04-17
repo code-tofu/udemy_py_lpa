@@ -136,34 +136,55 @@
 
 #CHALLENGE 136
 # modify the programe such that an invalid song choice will show the list of albums again instead of terminiating
-from nested_data import albums
+# from nested_data import albums
 
-SONGS_LIST_INDEX = 3
-SONG_TITLE_INDEX = 1
+# SONGS_LIST_INDEX = 3
+# SONG_TITLE_INDEX = 1
 
-while True:
-    print("Please choose your album (invalid choice exits):")
-    for index, (title, artist, year, songs) in enumerate(albums):
-        print("{}: {}".format(index + 1, title))
+# while True:
+#     print("Please choose your album (invalid choice exits):")
+#     for index, (title, artist, year, songs) in enumerate(albums):
+#         print("{}: {}".format(index + 1, title))
 
-    choice = int(input())
-    if 1 <= choice <= len(albums):
-        songs_list = albums[choice -1][SONGS_LIST_INDEX]
-    else:
-        break
+#     choice = int(input())
+#     if 1 <= choice <= len(albums):
+#         songs_list = albums[choice -1][SONGS_LIST_INDEX]
+#     else:
+#         break
 
-    while True:
-        print("Please choose your song:")
-        for index, (track_number, song) in enumerate(songs_list):
-            print("{}: {}".format(index + 1, song))
+#     while True:
+#         print("Please choose your song:")
+#         for index, (track_number, song) in enumerate(songs_list):
+#             print("{}: {}".format(index + 1, song))
 
-        song_choice = int(input())
-        if 1 <= song_choice <= len(songs_list):
-            title = songs_list[song_choice - 1][SONG_TITLE_INDEX]
-            print("Playing {}".format(title)) #the title is still active within the existing while loop before ending?
-            print("=" * 40)
-            break
-        else:
-            print("Please enter a valid song choice")
-            continue
+#         song_choice = int(input())
+#         if 1 <= song_choice <= len(songs_list):
+#             title = songs_list[song_choice - 1][SONG_TITLE_INDEX]
+#             print("Playing {}".format(title)) #the title is still active within the existing while loop before ending?
+#             print("=" * 40)
+#             break
+#         else:
+#             print("Please enter a valid song choice")
+#             continue
        
+#CHALLENGE 141
+def is_palindrome(string):
+    # backwards = string[::-1]
+    # return backwards == string
+    return string[::-1].casefold() == string.casefold()
+#casefold is a string method not a function
+
+word = input("Please enter a word to check: ")
+if is_palindrome(word):
+    print("'{}' is a palindrome".format(word))
+else:
+    print("'{}' is not a palindrome".format(word))
+
+#CHALLENGE 142
+def palindrome_sentence(sentence):
+    string = ""
+    for char in sentence:
+        if char.isalnum():
+            string += char
+    print(string)
+    return string[::-1].casefold() == string.casefold()
