@@ -1,5 +1,5 @@
-CHALLENGE 119
-Use a for loop to produce a list of ints, rather than strings.
+#CHALLENGE 119
+# Use a for loop to produce a list of ints, rather than strings.
 # You can either modify the contents of the 'values_list' list in place, or create a new list of ints
 
 generated_list = ['9', ' ',
