@@ -10,7 +10,7 @@ print(vehicles['dream']) # accessed using square bracket
 #keys are case sensitive
 
 print(vehicles.get('dream')) #alternative method
-print(vehicles.get('dreams')) # does not throw erro but returns None
+print(vehicles.get('dreams')) # does not throw errow but returns None if key does not exist
 
 #iterate over the keys 
 for key in vehicles: #does not have to be named key

@@ -1,12 +1,26 @@
-# see 189abs
+##comparing list vs dict
 
-#add list implementation
+# list implementation 
+# available_parts = ["computer",
+#                    "monitor",
+#                    "keyboard",
+#                    "mouse",
+#                    "hdmi cable",
+#                    "dvd drive"
+#                    ]
 
-## compare with list
-##. edit me 190 
+## valid_choices = [str(i) for i in range(1, len(available_parts) +1)] # alternative loop
 
+# valid_choices = []
+# for i in range(1, len(available_parts) + 1):
+#     valid_choices.append(str(i))
+# print(valid_choices)
+# current_choice = "-"
+# computer_parts = [] 
 
+# available_parts.sort() # might need to sort?
 
+## dict implementation
 available_parts = {"1": "computer",
                    "2": "monitor",
                    "3": "keyboard",
@@ -17,16 +31,15 @@ available_parts = {"1": "computer",
 
 
 
-##list implementation 
-# computer_parts = []  
-# available_parts.sort()
-
-
 current_choice = None
 computer_parts={}
 
 while current_choice != "0":
     if current_choice in available_parts: #in only checks the keys in a dictionary
+
+        # index = int(current_choice) - 1
+        # chosen_part = available_parts[index]
+
         chosen_part = available_parts[current_choice]
         if chosen_part in computer_parts:
             # it's already in, so remove it
@@ -42,13 +55,11 @@ while current_choice != "0":
         print(f"Your dictionary now contains: {computer_parts}")
     else:
         print("Please add options from the list:")
+        # for number, part in enumerate(available_parts):
+        #     print("{0}: {1}".format(number + 1, part))
         for key, value in available_parts.items(): # return all entries
             print(f"{key}: {value}")
         print("0: to finish")
 
     current_choice = input("> ")
 
-
-
-#191 
-# contents.txt
