@@ -1,4 +1,4 @@
-# CHALLENGE 114
+# CHALLENGE 115-116
 #print out all the meals in the menu but remove spam
 #either remove spam from each list then print the list, or print out the items in each list which is not spam
 menu = [

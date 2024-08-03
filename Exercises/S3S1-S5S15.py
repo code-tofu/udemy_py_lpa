@@ -1,17 +1,18 @@
-
-# EXERCISE 1
+# SOLUTION 1
 print("My hovercraft is full of eels")
-# EXERCISE 2
+
+# SOLUTION 2
 print(6 * 7)
-# EXERCISE 3
+
+# SOLUTION 3
 print ("Number 1 \t The Larch \n Number 2 \t The Horse Chestnut")
 
-# EXERCISE 4
+# SOLUTION 4
 bun_price = 2.40
 money = 15
-
 print(money // bun_price)
-# EXERCISE 5
+
+# SOLUTION 5
 tree1 = "Oak"
 tree2 = "Larch"
  
@@ -21,7 +22,7 @@ if tree1 == tree2:
 else:
     print("The trees are different")
 
-# EXERCISE 6
+# SOLUTION 6
 x = 5
 y = 7
  
@@ -33,7 +34,7 @@ else:
     print("x equals y")
 
 
-# EXERCISE 7
+# SOLUTION 7
 quote = """
 Alright, but apart from the Sanitation, the Medicine, Education, Wine,
 Public Order, Irrigation, Roads, the Fresh-Water System,
@@ -56,12 +57,12 @@ for char in quote:
     if char in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
         print(char)
 
-# EXERCISE 8
+# SOLUTION 8
 for i in range(10):
     print(i)
 
 
-# EXERCISE 9
+# SOLUTION 9
 # This solution uses a step value for the range function
 for i in range(0, 101, 7):
     print(i)
@@ -70,7 +71,7 @@ for i in range(101)[::7]:
     print(i)
 
 
-# EXERCISE 10
+# SOLUTION 10
 # Modify the code inside this loop to stop when i is greater than zero and exactly divisible by 11
 for i in range(0, 100, 7):
     print(i)
@@ -78,7 +79,7 @@ for i in range(0, 100, 7):
         break
 
 
-# EXERCISE 11
+# SOLUTION 11
 # using continue
 for x in range(21):
     if x % 3 == 0 or x % 5 == 0:
@@ -90,7 +91,7 @@ for x in range(21):
         print(x)
     
 
-# EXERCISE 12
+# SOLUTION 12
 number = 5
 multiplier = 8
 answer = 0
@@ -102,7 +103,7 @@ for i in range(multiplier):
 print(answer)
 
 
-# EXERCISE 13
+# SOLUTION 13
 data = [
     "Andromeda - Shrub",
     "Bellflower - Flower",
@@ -135,7 +136,7 @@ for plant in data:
     elif "Shrub" in plant:
         shrubs.append(plant)
 
-# EXERCISE 14
+# SOLUTION 14
 # Take input from the user
 user_input = input("Please enter three numbers: ")
 
@@ -155,7 +156,7 @@ result = a + b - c
 # Output the result
 print(result)
 
-# EXERCISE 15
+# SOLUTION 15
 albums = [
     ("Welcome to my Nightmare", "Alice Cooper", 1975,
      [

@@ -1,4 +1,4 @@
-#CHALLENGE L68
+#CHALLENGE L69-70
 #use a while loop to allow the player to keep guessing
 import random
 highest = 10

@@ -1,4 +1,4 @@
-#CHALLENGE L32
+#CHALLENGE L33-34
 letters = "abcdefghijklmnopqrstuvwxyz"
 
 #slice qpo

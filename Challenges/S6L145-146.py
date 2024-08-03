@@ -1,4 +1,4 @@
-#CHALLENGE 141
+#CHALLENGE 145-146
 def is_palindrome(string):
     # backwards = string[::-1]
     # return backwards == string

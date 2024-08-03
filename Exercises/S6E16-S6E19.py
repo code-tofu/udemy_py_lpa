@@ -1,4 +1,4 @@
-# EXERCISE16
+# EXERCISE 16
 """
 you have to write a function named sum_eo with the following parameters: n: a positive number t: a str
 If t has the value 'e', the function should return the sum of all even natural numbers less than n.

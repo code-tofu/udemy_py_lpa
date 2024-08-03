@@ -1,10 +1,10 @@
-#CHALLENGE 131
+#CHALLENGE 137-138
 # From Albums, user gets to select the album, then the song.
 # Selecting zero quits the application
 # Change quit behaviour to restart application
 
 # import album data
-from nestedAlbumData import albums
+from nested_data import albums
 # print(albums)
 
 # can use constants, preventing "magic integers".
@@ -38,27 +38,7 @@ while True:
         print("INVALID CHOICE")
         continue
 
-# TODO: NOTES
-    # IndexError: tuple index out of range
-    # Need to be aware of zero index and what index you want to access
-    # Range creates but does not include end value
-    # use 1<= userAlbum <= len(albums) more efficient than range function
-
-# TODO: UNDERSTANDING THE ENUMERATE FUNCTION:
-    # for index, listitem in enumerate(albums):
-    #     #enumerate is called on the list, not the iterable
-    #     #need to unpack the tuple first so that the for loop knows what to iterate over
-    #     print("{0}:{1}".format(index,listitem))
-    # print("-----")
-    #     # print("{0}:{1}".format(name,albums[name])) TypeError: list indices must be integers or slices, not str
-    # for index, listitem in enumerate(albums[0]):
-    #     print("{0}:{1}".format(index,listitem))
-    # print("-----")
-    # for index, (listitem1,listitem2,listitem3,listitem4) in enumerate(albums):
-    #     print("{0}:{1}".format(index,listitem1))
-    # print("-----")
-
-#CHALLENGE 136 - OLD VERSION
+#CHALLENGE 137 -138 Solution
 # modify the programe such that an invalid song choice will show the list of albums again instead of terminiating
 # from nested_data import albums
 
@@ -90,3 +70,23 @@ while True:
 #         else:
 #             print("Please enter a valid song choice")
 #             continue
+
+# TODO: NOTES
+    # IndexError: tuple index out of range
+    # Need to be aware of zero index and what index you want to access
+    # Range creates but does not include end value
+    # use 1<= userAlbum <= len(albums) more efficient than range function
+
+# TODO: UNDERSTANDING THE ENUMERATE FUNCTION:
+    # for index, listitem in enumerate(albums):
+    #     #enumerate is called on the list, not the iterable
+    #     #need to unpack the tuple first so that the for loop knows what to iterate over
+    #     print("{0}:{1}".format(index,listitem))
+    # print("-----")
+    #     # print("{0}:{1}".format(name,albums[name])) TypeError: list indices must be integers or slices, not str
+    # for index, listitem in enumerate(albums[0]):
+    #     print("{0}:{1}".format(index,listitem))
+    # print("-----")
+    # for index, (listitem1,listitem2,listitem3,listitem4) in enumerate(albums):
+    #     print("{0}:{1}".format(index,listitem1))
+    # print("-----")
