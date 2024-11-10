@@ -57,7 +57,7 @@
 #         found_at = index #if not found, it's found at none (initialised)
 #         break
     
-# # if item_to_find in shopping_list: #alternative method to loop, to search in range "in"
+# # if item_to_find in shopping_list: #alternative method to loop, to search in range "in" which is more succint
 # #     found_at = shopping_list.index(item_to_find)
 # if found_at is not None:
 #     print("Item found at position {}".format(found_at))

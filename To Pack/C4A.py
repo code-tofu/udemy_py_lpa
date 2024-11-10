@@ -47,7 +47,7 @@
 # else:
 #     print("You got it right!")
 
-# LESSON 46: More efficienty code for Lesson 44
+# LESSON 46: More efficient code for Lesson 44 to avoid duplicates
 # answer = 5
 # print ("Please guess the number between 1 to 10:")
 # guess = int(input())
@@ -57,14 +57,14 @@
 #     else: #guess greater than answer
 #         print("Please Guess Lower")
 #     guess = int(input())
-#     if guess==answer:
+#     if guess == answer:
 #         print("Well done, you've guessed it")
 #     else:
 #         print ("Sorry, you have not guessed correctly")
 # else:
 #     print("You got it right the first time!")
 
-#LESSON 47: flip the logic around
+#LESSON 47: flip the logic around to uyse == instead of !=
 # answer = 5
 # print ("Please guess the number between 1 to 10:")
 # guess = int(input())

@@ -33,7 +33,7 @@ while True: #we can't use guess!=answer because we dunno the value of answer (in
 
 #LESSON 76 Else in loop
 numbers = [1, 45, 31, 16, 60]
-
+ 
 for number in numbers:
     if number % 8 == 0:
         # reject the list
