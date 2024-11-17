@@ -89,7 +89,7 @@ even.sort
 even.sort(reverse=True) #keyword argument
 #this does not create another copy of the list, it rearranges (sorting in place)
 
-LECTURE 99-100 Sorting
+# LECTURE 99-100 Sorting
 pangram = "The quick brown fox jumps over the lazy dog"
 
 letters = sorted(pangram)
