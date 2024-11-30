@@ -10,7 +10,7 @@
 # tuple is a bad choice because you cannot quickly get the tuple, you need to iterate through the list and check each tuply by packing
 
 # can use sorted()
-# can use setdefault() or default dict
+# can use setdefault() or defaultdict of collections module
 
 # handle if pantry does not stock item
 
